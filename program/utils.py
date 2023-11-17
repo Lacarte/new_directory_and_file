@@ -9,7 +9,9 @@ import argparse
 
 def setup_logging():
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    logs_dir = os.path.join(current_dir, "logs")
+    parent_dir = os.path.dirname(current_dir)  # Get the parent directory of current_dir
+    logs_dir = os.path.join(parent_dir, "logs")  # Create logs_dir in the parent directory
+
     if not os.path.exists(logs_dir):
         os.makedirs(logs_dir)
 

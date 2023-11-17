@@ -1,7 +1,7 @@
 # file.py
 
 import os
-from utils import generate_random_id
+from .utils import generate_random_id
 
 def create_file(root_dir, name_file):
     new_file = os.path.join(root_dir, name_file)

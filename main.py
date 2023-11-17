@@ -1,9 +1,10 @@
 # main.py
 
-from utils import setup_logging, parse_args,generate_random_id
-from directory import create_directory
-from file import create_file
 import logging
+from program.utils import setup_logging, parse_args, generate_random_id
+from program.directory import create_directory
+from program.file import create_file
+
 
 if __name__ == "__main__":
     setup_logging()

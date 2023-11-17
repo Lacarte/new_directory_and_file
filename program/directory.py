@@ -1,7 +1,7 @@
 # directory.py
 
 import os
-from utils import generate_random_id
+from .utils import generate_random_id
 
 def create_directory(root_dir, name_dir):
     new_dir = os.path.join(root_dir, name_dir)
