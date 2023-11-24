@@ -4,6 +4,7 @@ import logging
 from program.utils import setup_logging, parse_args, generate_random_id
 from program.directory import create_directory
 from program.file import create_file
+import time
 
 
 if __name__ == "__main__":
@@ -25,3 +26,12 @@ if __name__ == "__main__":
         logging.info(f"Directory created: {created_dir}")
     else:
         logging.error("Neither 'f' nor 'd' is defined, a parameter argument is necessary for file or directory creation")
+
+    timeInSeconds = 15
+    while timeInSeconds:
+        mins, secs = divmod(timeInSeconds, 60)
+        timer = '{:02d}'.format(secs)
+        timer = f"\033[92m{timer} seconds\033[0m"  # \033[92m is the escape sequence for light green
+        print(timer, end="\r")
+        time.sleep(1)
+        timeInSeconds -= 1
