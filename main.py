@@ -27,7 +27,7 @@ if __name__ == "__main__":
     else:
         logging.error("Neither 'f' nor 'd' is defined, a parameter argument is necessary for file or directory creation")
 
-    timeInSeconds = 15
+    timeInSeconds = 2
     while timeInSeconds:
         mins, secs = divmod(timeInSeconds, 60)
         timer = '{:02d}'.format(secs)
